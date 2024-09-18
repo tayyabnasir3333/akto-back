@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  server:
+    build: .
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    ports:
+      - "5001:5001"
+    restart: always
+#     networks:
+#       - redisnetwork
+#   redis:
+#       image: "redis:latest"
+#       networks:
+#         - redisnetwork
+# networks:
+#   redisnetwork
+ 
+    
